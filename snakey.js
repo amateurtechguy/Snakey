@@ -1,5 +1,5 @@
 const board = document.getElementById('game-board');
-let snake = [{ x: 10; y: 10 }];
+let snake = [{ x: 10, y: 10 }];
 function draw() {
     board.innerHTML = '';
     drawSnake();
