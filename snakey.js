@@ -1,10 +1,9 @@
-
 const board = document.getElementById('game-board');
 const gridSize = 20;
 const instruction = document.getElementById('instruction');
 const logo = document.getElementById('logo');
 const score = document.getElementById('score');
-const highScoreText = document.getElementById('highScore');
+const highScoreText = document.getElementById('highscore');
 
 let snake = [
     { x: 10, y: 9 },
@@ -86,6 +85,7 @@ function move() {
     }
     snake.unshift(head);
     if (ateFood) {
+        updateHighScore();
         food = generateFood();
         increaseSpeed();
         clearInterval(gameInterval);
@@ -132,7 +132,6 @@ function handleKeyPress(event) {
     }
 }
 document.addEventListener('keydown', handleKeyPress);
-
 function increaseSpeed() {
     if (gameSpeedDelay > 150) {
         gameSpeedDelay -= 5;
@@ -143,20 +142,6 @@ function increaseSpeed() {
     } else if (gameSpeedDelay > 25) {
         gameSpeedDelay -= 1;
     }
-}
-function checkCollision() {
-    const head = snake[0];
-    if (head.x < 1 || head.x > gridSize || head.y < 1 || head.y > gridSize) {
-        resetGame();
-        return true;
-    }
-    for (let i = 1; i < snake.length; i++) {
-        if (head.x === snake[i].x && head.y === snake[i].y) {
-            resetGame();
-            return true;
-        }
-    }
-    return false;
 }
 function resetGame() {
     updateHighScore();
@@ -170,13 +155,12 @@ function resetGame() {
     nextDirection = 'right';
     gameSpeedDelay = 200;
     gameStarted = false;
-    updateScore();
     draw();
     stopGame();
 }
 function updateScore() {
-    const currentScore = snake.length - 2;
-    score.textContent = Math.max(0, currentScore).toString().padStart(3, '0');
+    const currentScore = Math.max(0, snake.length - 2);
+    score.textContent = currentScore.toString().padStart(3, '0');
 }
 function stopGame() {
     clearInterval(gameInterval);
