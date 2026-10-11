@@ -3,6 +3,9 @@ When was the last time you have seen a snake game somewhere on your phone? unles
 
 <img width="384" height="415" alt="Screenshot 2026-10-10 150407" src="https://github.com/user-attachments/assets/c36aea04-9538-4eab-b2bf-ba3faebcd52c" />
 
+<img width="444" height="405" alt="image" src="https://github.com/user-attachments/assets/f3e21507-ffc6-4f0d-8bcb-e3ab8c3823cf" />
+
+
 ## How to use?
 
 Simply just go to the website, and click space and you're set! you can officially play the game using your arrow keys, enjoy!
