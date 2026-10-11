@@ -10,6 +10,8 @@ When was the last time you have seen a snake game somewhere on your phone? unles
 
 Simply just go to the website, and click space and you're set! you can officially play the game using your arrow keys, enjoy!
 
+PLEASE NOTE: the best performance is often in full screen mode:)
+
 ## Why was this made?
 
 This was made particularly to gain new skills in javascript, as I am getting a bit rusty
