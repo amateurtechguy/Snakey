@@ -58,7 +58,6 @@ body, .snake{
 }
 #highscore{
     color: #ff9999;
-    display: none;
 }
 .game-border-3, #logo{
     background-color: #1a0505;
